@@ -23,22 +23,14 @@ import java.util.List;
 public class Swagger2 {
         @Bean
         public Docket createRestApi() {
-            //***add by zm 2019/1/11
-            ParameterBuilder ticketPar = new ParameterBuilder();
-            List<Parameter> pars = new ArrayList<Parameter>();
-            ticketPar.name("wsObject").description("认证租户")
-                    .modelRef(new ModelRef("string")).parameterType("header")
-                    .required(false).build(); //header中的ticket参数非必填
-            pars.add(ticketPar.build());
             //*****
             return new Docket(DocumentationType.SWAGGER_2)
                     .apiInfo(apiInfo())
                     .select()
                     //当前包路径
-                    .apis(RequestHandlerSelectors.basePackage("com.tydic.repositoryImage.controller"))
+                    .apis(RequestHandlerSelectors.basePackage("com.onlineShop.controller"))
                     .paths(PathSelectors.any())
-                    .build()
-                    .globalOperationParameters(pars);
+                    .build();
         }
 
         private ApiInfo apiInfo() {
