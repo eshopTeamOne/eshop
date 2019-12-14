@@ -3,8 +3,11 @@ package com.onlineShop.dto;
 import com.onlineShop.bean.CfgGoodsUnit;
 import com.onlineShop.bean.CfgGoodsUnitExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface CfgGoodsUnitMapper {
     long countByExample(CfgGoodsUnitExample example);
 

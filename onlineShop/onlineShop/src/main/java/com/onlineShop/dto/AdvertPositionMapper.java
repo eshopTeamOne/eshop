@@ -8,7 +8,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 @Mapper
-public interface AdvertPositionMapper {
+public interface AdvertPositionMapper
+{
     long countByExample(AdvertPositionExample example);
 
     int deleteByExample(AdvertPositionExample example);

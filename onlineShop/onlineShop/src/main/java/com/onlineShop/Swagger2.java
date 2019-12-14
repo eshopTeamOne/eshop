@@ -16,33 +16,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *Swagger2配置类
+ * Swagger2配置类
  * add by zach
  */
-@Configuration
-public class Swagger2 {
-        @Bean
-        public Docket createRestApi() {
-            //*****
-            return new Docket(DocumentationType.SWAGGER_2)
-                    .apiInfo(apiInfo())
-                    .select()
-                    //当前包路径
-                    .apis(RequestHandlerSelectors.basePackage("com.onlineShop.controller"))
-                    .paths(PathSelectors.any())
-                    .build();
-        }
+@Configuration public class Swagger2
+{
+	@Bean public Docket createRestApi()
+	{
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
+				//当前包路径
+				.apis(RequestHandlerSelectors.basePackage("com.onlineShop.controller")).paths(PathSelectors.any())
+				.build();
+	}
 
-        private ApiInfo apiInfo() {
-            return new ApiInfoBuilder()
-                    //页面标题
-                    .title("电商 api")
-                    //描述
-                    .description("用代码行数来评估程序的开发进度，就好比是拿重量来评估一个飞机的建造进度。            —— 比尔盖茨")
-                    .termsOfServiceUrl("")
-                    //版本号
-                    .version("1.0")
-                    .build();
-        }
+	private ApiInfo apiInfo()
+	{
+		return new ApiInfoBuilder()
+				//页面标题
+				.title("电商 api")
+				//描述
+				.description("用代码行数来评估程序的开发进度，就好比是拿重量来评估一个飞机的建造进度。            —— 比尔盖茨").termsOfServiceUrl("")
+				//版本号
+				.version("1.0").build();
+	}
 
 }

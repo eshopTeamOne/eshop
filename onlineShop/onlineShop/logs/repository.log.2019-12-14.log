@@ -1,0 +1,105 @@
+2019-12-14 20:39:40.281 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 6460 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 20:39:40.289 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 20:39:42.085 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 20:39:42.507 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 20:39:42.522 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:39:42.522 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 20:39:42.523 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 20:39:42.820 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 20:39:42.821 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2421 ms
+2019-12-14 20:39:42.898 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dto.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-12-14 20:39:42.904 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-14 20:39:42.938 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-14 20:39:43.073 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dto.AdvertPositionMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.onlineShop.dto.AdvertPositionMapper' in your configuration.
+
+2019-12-14 20:40:41.417 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 13412 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 20:40:41.446 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 20:40:43.365 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 20:40:43.751 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 20:40:43.762 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:40:43.763 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 20:40:43.763 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 20:40:44.052 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 20:40:44.053 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2475 ms
+2019-12-14 20:40:44.120 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dto.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-12-14 20:40:44.125 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-14 20:40:44.148 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-14 20:40:44.280 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dto.AdvertPositionMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.onlineShop.dto.AdvertPositionMapper' in your configuration.
+
+2019-12-14 20:42:35.280 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 12796 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 20:42:35.286 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 20:42:37.171 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 20:42:37.575 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 20:42:37.587 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:42:37.587 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 20:42:37.587 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 20:42:37.884 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 20:42:37.884 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2504 ms
+2019-12-14 20:42:39.117 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 20:42:39.229 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 20:42:39.286 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 20:42:39.415 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 20:42:39.442 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 20:42:39.481 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 20:42:39.590 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:42:39.620 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 20:42:39.627 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 5.41 seconds (JVM running for 8.589)
+2019-12-14 20:43:35.950 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 10696 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 20:43:35.964 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 20:43:38.086 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 20:43:38.460 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 20:43:38.471 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:43:38.472 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 20:43:38.473 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 20:43:38.766 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 20:43:38.766 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2691 ms
+2019-12-14 20:43:39.883 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 20:43:39.985 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 20:43:40.033 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 20:43:40.154 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 20:43:40.176 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 20:43:40.213 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 20:43:40.314 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 20:43:40.344 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 20:43:40.347 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 5.67 seconds (JVM running for 8.771)
+2019-12-14 20:43:46.568 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-14 20:43:46.569 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-14 20:43:46.584 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2019-12-14 20:43:46.641 [http-nio-8888-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-14 20:43:46.840 [http-nio-8888-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

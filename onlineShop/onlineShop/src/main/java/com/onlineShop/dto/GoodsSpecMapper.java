@@ -3,8 +3,11 @@ package com.onlineShop.dto;
 import com.onlineShop.bean.GoodsSpec;
 import com.onlineShop.bean.GoodsSpecExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface GoodsSpecMapper {
     long countByExample(GoodsSpecExample example);
 
