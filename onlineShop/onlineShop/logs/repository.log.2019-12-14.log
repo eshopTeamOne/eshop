@@ -1028,3 +1028,125 @@ com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL, failed t
 2019-12-14 16:09:38.449 [http-nio-8888-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
 2019-12-14 16:09:38.522 [http-nio-8888-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2019-12-14 16:09:38.681 [http-nio-8888-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-14 17:53:11.101 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 11888 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 17:53:11.106 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 17:53:12.979 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 17:53:13.770 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 17:53:13.816 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:53:13.817 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 17:53:13.819 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 17:53:14.393 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 17:53:14.393 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3167 ms
+2019-12-14 17:53:15.950 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 17:53:16.243 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:53:16.369 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 17:53:16.643 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 17:53:16.675 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 17:53:16.727 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 17:53:16.767 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:53:16.820 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 17:53:16.824 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 6.625 seconds (JVM running for 9.609)
+2019-12-14 17:53:29.965 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 21320 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 17:53:29.970 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 17:53:31.559 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 17:53:32.024 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 17:53:32.039 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:53:32.040 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 17:53:32.041 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 17:53:32.347 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 17:53:32.348 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2276 ms
+2019-12-14 17:53:33.520 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 17:53:33.628 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:53:33.684 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 17:53:33.808 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 17:53:33.826 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 17:53:33.863 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 17:53:33.887 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:53:33.916 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 17:53:33.920 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 4.883 seconds (JVM running for 7.561)
+2019-12-14 17:53:34.108 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-14 17:53:34.108 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-14 17:53:34.120 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-12-14 17:56:10.641 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 16532 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 17:56:10.648 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 17:56:12.550 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 17:56:12.908 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 17:56:12.920 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:56:12.921 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 17:56:12.922 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 17:56:13.203 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 17:56:13.204 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2425 ms
+2019-12-14 17:56:14.525 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 17:56:14.648 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:56:14.710 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 17:56:14.842 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 17:56:14.864 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 17:56:14.909 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 17:56:15.051 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:56:15.087 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 17:56:15.090 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 5.559 seconds (JVM running for 9.107)
+2019-12-14 17:56:16.061 [http-nio-8888-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-14 17:56:16.062 [http-nio-8888-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-14 17:56:16.072 [http-nio-8888-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-12-14 17:57:20.637 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2019-12-14 17:57:20.810 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 20084 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 17:57:20.813 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 17:57:24.038 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 17:57:24.702 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 17:57:24.721 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:24.722 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 17:57:24.723 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 17:57:25.637 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 17:57:25.637 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4644 ms
+2019-12-14 17:57:26.205 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 15104 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
+2019-12-14 17:57:26.210 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
+2019-12-14 17:57:28.132 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 17:57:28.348 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:57:28.429 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 17:57:28.839 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 17:57:28.895 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 17:57:28.976 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 17:57:29.155 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:29.193 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-14 17:57:29.200 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-14 17:57:29.205 [main] INFO  com.onlineShop.OnlineShopApplication - Started OnlineShopApplication in 9.465 seconds (JVM running for 12.896)
+2019-12-14 17:57:29.720 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-14 17:57:29.732 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:29.733 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 17:57:29.733 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 17:57:30.106 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 17:57:30.107 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3795 ms
+2019-12-14 17:57:30.216 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-14 17:57:30.216 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-14 17:57:30.227 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2019-12-14 17:57:31.794 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2019-12-14 17:57:31.938 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:57:32.017 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-12-14 17:57:32.176 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-14 17:57:32.203 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-14 17:57:32.354 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-14 17:57:32.594 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:32.620 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:32.621 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-14 17:57:32.629 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:32.630 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8888"]
+2019-12-14 17:57:32.633 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-14 17:57:32.645 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8888 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8888 or configure this application to listen on another port.
+
+2019-12-14 17:57:32.648 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-14 17:57:56.553 [http-nio-8888-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-14 17:57:56.743 [http-nio-8888-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
