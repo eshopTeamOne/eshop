@@ -1,0 +1,4 @@
+spring:
+    user:
+      name: user
+      password: oneminute #����Ĭ��security�˺ź�����
