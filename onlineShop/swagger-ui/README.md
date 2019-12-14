@@ -1,0 +1,3 @@
+swagger 说明
+application.yml里面配置security但是不生效是因为在application主类扫描时没有加载SecurityAutoConfiguration类
+主要的方式都在 config里面 自行查看，选择对应注解方法
