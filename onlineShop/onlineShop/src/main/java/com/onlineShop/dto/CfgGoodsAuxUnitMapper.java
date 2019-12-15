@@ -1,9 +1,10 @@
 package com.onlineShop.dto;
 
 import com.onlineShop.bean.CfgGoodsAuxUnit;
-import com.onlineShop.bean.CfgGoodsAuxUnitExample;
+
 import java.util.List;
 
+import com.onlineShop.bean.CfgGoodsAuxUnitExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

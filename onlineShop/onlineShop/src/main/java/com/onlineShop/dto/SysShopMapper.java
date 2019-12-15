@@ -1,9 +1,10 @@
 package com.onlineShop.dto;
 
 import com.onlineShop.bean.SysShop;
-import com.onlineShop.bean.SysShopExample;
+
 import java.util.List;
 
+import com.onlineShop.bean.SysShopExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

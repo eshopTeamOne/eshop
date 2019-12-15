@@ -1,9 +1,10 @@
 package com.onlineShop.dto;
 
 import com.onlineShop.bean.AdvertPosition;
-import com.onlineShop.bean.AdvertPositionExample;
+
 import java.util.List;
 
+import com.onlineShop.bean.AdvertPositionExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
