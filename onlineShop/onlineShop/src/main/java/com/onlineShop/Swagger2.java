@@ -33,9 +33,9 @@ import java.util.List;
 	{
 		return new ApiInfoBuilder()
 				//页面标题
-				.title("电商 api")
+				.title("电商系统 api")
 				//描述
-				.description("用代码行数来评估程序的开发进度，就好比是拿重量来评估一个飞机的建造进度。            —— 比尔盖茨").termsOfServiceUrl("")
+				.description("用代码行数来评估程序的开发进度，就好比是拿重量来评估一个飞机的建造进度。 —— 比尔盖茨").termsOfServiceUrl("")
 				//版本号
 				.version("1.0").build();
 	}
