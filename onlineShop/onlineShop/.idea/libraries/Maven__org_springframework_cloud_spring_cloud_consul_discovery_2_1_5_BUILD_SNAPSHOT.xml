@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-consul-discovery:2.1.5.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/my_repository/org/springframework/cloud/spring-cloud-consul-discovery/2.1.5.BUILD-SNAPSHOT/spring-cloud-consul-discovery-2.1.5.BUILD-20191213.151645-197.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Documents/my_repository/org/springframework/cloud/spring-cloud-consul-discovery/2.1.5.BUILD-SNAPSHOT/spring-cloud-consul-discovery-2.1.5.BUILD-20191213.151645-197-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/my_repository/org/springframework/cloud/spring-cloud-consul-discovery/2.1.5.BUILD-SNAPSHOT/spring-cloud-consul-discovery-2.1.5.BUILD-20191213.151645-197-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

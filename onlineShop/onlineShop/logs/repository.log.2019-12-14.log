@@ -7,7 +7,7 @@
 2019-12-14 20:39:42.523 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
 2019-12-14 20:39:42.820 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
 2019-12-14 20:39:42.821 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2421 ms
-2019-12-14 20:39:42.898 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dto.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-12-14 20:39:42.898 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dao.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2019-12-14 20:39:42.904 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
 2019-12-14 20:39:42.938 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
@@ -20,7 +20,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dto.AdvertPositionMapper' that could not be found.
+Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dao.AdvertPositionMapper' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -28,7 +28,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.onlineShop.dto.AdvertPositionMapper' in your configuration.
+Consider defining a bean of type 'com.onlineShop.dao.AdvertPositionMapper' in your configuration.
 
 2019-12-14 20:40:41.417 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 13412 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
 2019-12-14 20:40:41.446 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
@@ -39,7 +39,7 @@ Consider defining a bean of type 'com.onlineShop.dto.AdvertPositionMapper' in yo
 2019-12-14 20:40:43.763 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
 2019-12-14 20:40:44.052 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
 2019-12-14 20:40:44.053 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2475 ms
-2019-12-14 20:40:44.120 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dto.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-12-14 20:40:44.120 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.onlineShop.dao.AdvertPositionMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2019-12-14 20:40:44.125 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
 2019-12-14 20:40:44.148 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
@@ -52,7 +52,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dto.AdvertPositionMapper' that could not be found.
+Field mapper in com.onlineShop.service.impl.DemoMgrImpl required a bean of type 'com.onlineShop.dao.AdvertPositionMapper' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -60,7 +60,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.onlineShop.dto.AdvertPositionMapper' in your configuration.
+Consider defining a bean of type 'com.onlineShop.dao.AdvertPositionMapper' in your configuration.
 
 2019-12-14 20:42:35.280 [main] INFO  com.onlineShop.OnlineShopApplication - Starting OnlineShopApplication on DESKTOP-AAV59V7 with PID 12796 (D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes started by zzq in D:\OnlineShop\eshop\onlineShop\onlineShop)
 2019-12-14 20:42:35.286 [main] INFO  com.onlineShop.OnlineShopApplication - No active profile set, falling back to default profiles: default
@@ -756,7 +756,7 @@ Caused by: com.mysql.cj.exceptions.WrongArgumentException: No timezone mapping e
 2019-12-14 21:42:56.451 [http-nio-8888-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
 ### The error may exist in file [D:\OnlineShop\eshop\onlineShop\onlineShop\target\classes\mybatis\AdvertPositionMapper.xml]
-### The error may involve com.onlineShop.dto.AdvertPositionMapper.insert
+### The error may involve com.onlineShop.dao.AdvertPositionMapper.insert
 ### The error occurred while executing an update
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.] with root cause
 com.mysql.cj.exceptions.WrongArgumentException: No timezone mapping entry for 'CST+8'

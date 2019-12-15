@@ -1,0 +1,408 @@
+2019-12-15 23:39:58.700 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/null/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:39:58.718 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:39:59.836 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=f7de52cc-98f5-3c2f-a22d-4ebacba63c29
+2019-12-15 23:39:59.922 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e413cad1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:40:00.225 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:40:00.249 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:40:00.263 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:40:00.263 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:40:00.466 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:40:00.466 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1731 ms
+2019-12-15 23:40:00.544 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+2019-12-15 23:40:00.546 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-15 23:40:00.562 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 23:40:00.567 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.onlineShop.HomeServerApplication.main(HomeServerApplication.java:22)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 32 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+	at org.springframework.util.Assert.notNull(Assert.java:198)
+	at org.mybatis.spring.support.SqlSessionDaoSupport.checkDaoConfig(SqlSessionDaoSupport.java:122)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:73)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	... 42 common frames omitted
+2019-12-15 23:41:54.963 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/null/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:41:54.984 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:41:56.210 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=75967c7e-667e-3231-85b6-5214de957647
+2019-12-15 23:41:56.324 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6116bb84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:41:56.348 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7d30be81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:41:56.673 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:41:56.698 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:41:56.711 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:41:56.711 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:41:56.917 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:41:56.917 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1917 ms
+2019-12-15 23:41:57.104 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to 'DataSourceProperties' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.datasource.type' to java.lang.Class<javax.sql.DataSource>
+2019-12-15 23:41:57.106 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-15 23:41:57.131 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 23:41:57.135 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.type' to java.lang.Class<javax.sql.DataSource>:
+
+    Property: spring.datasource.type
+    Value: com.alibaba.druid.pool.DruidDataSource
+    Origin: class path resource [application.yml]:10:11
+    Reason: No converter found capable of converting from type [java.lang.String] to type [java.lang.Class<javax.sql.DataSource>]
+
+Action:
+
+Update your application's configuration
+
+2019-12-15 23:48:30.493 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/null/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:48:30.518 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:48:31.919 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=75967c7e-667e-3231-85b6-5214de957647
+2019-12-15 23:48:32.122 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c4b437f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:48:32.185 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e0ce3af4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:48:32.895 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:48:32.934 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:48:32.967 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:48:32.967 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:48:33.461 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:48:33.462 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2921 ms
+2019-12-15 23:48:34.414 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+2019-12-15 23:48:34.415 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
+2019-12-15 23:48:34.418 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-15 23:48:34.474 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 23:48:34.485 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testDemo': Unsatisfied dependency expressed through field 'demoMgr'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.onlineShop.HomeServerApplication.main(HomeServerApplication.java:22)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMgrImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'advertPositionMapper' defined in file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\com\onlineShop\dao\AdvertPositionMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1388)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1493)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 56 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f7888927.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f7888927$$FastClassBySpringCGLIB$$f2d8aa05.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f7888927.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 57 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\code\vue_admin\onlineShop\onlineShop\HomeSystem\target\classes\mybatis\AdvertPositionMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 70 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.onlineShop.dao.AdvertPositionMapper.BaseResultMap
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:947)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:903)
+	at org.apache.ibatis.session.Configuration.addResultMap(Configuration.java:660)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:209)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:289)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 72 common frames omitted
+2019-12-15 23:53:43.862 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/null/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:53:43.885 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:53:45.059 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=69cf4da2-bdfb-35fc-9d58-6033c619229b
+2019-12-15 23:53:45.172 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf15192f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:53:45.201 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$eb2f1c2c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:53:45.518 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:53:45.538 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:53:45.550 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:53:45.550 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:53:45.784 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:53:45.784 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1879 ms
+2019-12-15 23:53:46.837 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-15 23:53:46.855 [main] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+2019-12-15 23:53:46.863 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:53:46.864 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:53:46.875 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:53:46.875 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:53:47.045 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 23:53:47.791 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistrationListener' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistrationListener' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistration' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consulRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+2019-12-15 23:53:47.792 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-15 23:53:47.796 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-0} closing ...
+2019-12-15 23:53:47.798 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-15 23:53:47.827 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 23:53:47.832 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistrationListener' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistrationListener' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistration' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consulRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.onlineShop.HomeServerApplication.main(HomeServerApplication.java:22)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistrationListener' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistrationListener' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistration' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consulRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:239)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:196)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at springfox.documentation.spring.web.ObjectMapperConfigurer.fireObjectMapperConfiguredEvent(ObjectMapperConfigurer.java:90)
+	at springfox.documentation.spring.web.ObjectMapperConfigurer.configureMessageConverters(ObjectMapperConfigurer.java:66)
+	at springfox.documentation.spring.web.ObjectMapperConfigurer.postProcessBeforeInitialization(ObjectMapperConfigurer.java:47)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1763)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	... 15 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consulAutoServiceRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'consulAutoServiceRegistration' parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consulRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consulRegistration' defined in class path resource [org/springframework/cloud/consul/serviceregistry/ConsulAutoServiceRegistrationAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration]: Factory method 'consulRegistration' threw exception; nested exception is java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Consul service ids must not be empty, must start with a letter, end with a letter or digit, and have as interior characters only letters, digits, and hyphen: ${spring.application.name}:192.168.0.104:8888
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration.normalizeForDns(ConsulAutoRegistration.java:178)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration.getInstanceId(ConsulAutoRegistration.java:172)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoRegistration.registration(ConsulAutoRegistration.java:84)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoServiceRegistrationAutoConfiguration.consulRegistration(ConsulAutoServiceRegistrationAutoConfiguration.java:79)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoServiceRegistrationAutoConfiguration$$EnhancerBySpringCGLIB$$abb875c6.CGLIB$consulRegistration$1(<generated>)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoServiceRegistrationAutoConfiguration$$EnhancerBySpringCGLIB$$abb875c6$$FastClassBySpringCGLIB$$833b718f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.cloud.consul.serviceregistry.ConsulAutoServiceRegistrationAutoConfiguration$$EnhancerBySpringCGLIB$$abb875c6.consulRegistration(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 64 common frames omitted
+2019-12-15 23:55:32.171 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/homeServerProvider/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:55:32.188 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:55:33.310 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=69cf4da2-bdfb-35fc-9d58-6033c619229b
+2019-12-15 23:55:33.408 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8a8aad17] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:55:33.433 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a6a4b014] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:55:33.725 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:55:33.746 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:55:33.759 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:55:33.760 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:55:33.972 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:55:33.973 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1770 ms
+2019-12-15 23:55:34.901 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-15 23:55:34.924 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:55:34.925 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:55:34.933 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:55:34.934 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:55:35.096 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 23:55:36.926 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'configWatchTaskScheduler'
+2019-12-15 23:55:36.931 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2019-12-15 23:55:37.048 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-15 23:55:37.088 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-15 23:55:37.134 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-15 23:55:37.313 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:55:37.344 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-15 23:55:37.359 [main] INFO  o.s.c.consul.serviceregistry.ConsulServiceRegistry - Registering service with consul: NewService{id='homeServerProvider-192-168-0-104-8888', name='homeServerProvider', tags=[secure=false], address='192.168.0.104', meta=null, port=8888, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://192.168.0.104:8888/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2019-12-15 23:55:38.024 [main] INFO  com.onlineShop.HomeServerApplication - Started HomeServerApplication in 9.401 seconds (JVM running for 10.135)
+2019-12-15 23:55:43.648 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 23:55:43.649 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-15 23:55:43.660 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2019-12-15 23:58:54.434 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/homeServerProvider/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+2019-12-15 23:58:54.452 [main] INFO  com.onlineShop.HomeServerApplication - No active profile set, falling back to default profiles: default
+2019-12-15 23:58:55.606 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=f5ce6ae0-02a6-3b25-abe4-32ded56fa2af
+2019-12-15 23:58:55.710 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39e97c51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:58:55.734 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$56037f4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-15 23:58:56.024 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2019-12-15 23:58:56.043 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:58:56.052 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 23:58:56.052 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 23:58:56.242 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 23:58:56.243 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1774 ms
+2019-12-15 23:58:57.215 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-15 23:58:57.232 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:58:57.232 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:58:57.239 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-12-15 23:58:57.239 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-15 23:58:57.372 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 23:58:59.106 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'configWatchTaskScheduler'
+2019-12-15 23:58:59.113 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2019-12-15 23:58:59.219 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-15 23:58:59.252 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-15 23:58:59.289 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-15 23:58:59.480 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2019-12-15 23:58:59.514 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-15 23:58:59.531 [main] INFO  o.s.c.consul.serviceregistry.ConsulServiceRegistry - Registering service with consul: NewService{id='homeServerProvider-192-168-0-104-8888', name='homeServerProvider', tags=[secure=false], address='192.168.0.104', meta=null, port=8888, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://192.168.0.104:8888/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+2019-12-15 23:59:00.174 [main] INFO  com.onlineShop.HomeServerApplication - Started HomeServerApplication in 9.259 seconds (JVM running for 9.984)
+2019-12-15 23:59:01.322 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 23:59:01.322 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-15 23:59:01.337 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms

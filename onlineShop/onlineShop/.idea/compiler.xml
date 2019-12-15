@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="HomeSystem" />
+        <module name="mybatis-generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HomeSystem" target="1.8" />
+      <module name="mybatis-generator" target="1.8" />
+      <module name="onlineShop" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HomeSystem" options="-parameters" />
+      <module name="mybatis-generator" options="-parameters" />
+      <module name="onlineShop" options="-parameters" />
+    </option>
+  </component>
+</project>
