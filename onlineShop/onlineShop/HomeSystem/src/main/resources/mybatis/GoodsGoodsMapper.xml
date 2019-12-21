@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlineShop.dao.GoodsGoodsMapper">
+  <resultMap id="BaseResultMap" type="com.onlineShop.bean.GoodsGoods">
+    <id column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="goods_no" jdbcType="VARCHAR" property="goodsNo" />
+    <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+    <result column="short_name" jdbcType="VARCHAR" property="shortName" />
+    <result column="spec_count" jdbcType="INTEGER" property="specCount" />
+    <result column="class_id" jdbcType="INTEGER" property="classId" />
+    <result column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="base_unit_id" jdbcType="SMALLINT" property="baseUnitId" />
+    <result column="aux_unit_id" jdbcType="SMALLINT" property="auxUnitId" />
+    <result column="origin" jdbcType="VARCHAR" property="origin" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="modified" jdbcType="TIMESTAMP" property="modified" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    goods_id, goods_no, goods_name, short_name, spec_count, class_id, brand_id, base_unit_id, 
+    aux_unit_id, origin, remark, modified, created
+  </sql>
+  <select id="selectByExample" parameterType="com.onlineShop.bean.GoodsGoodsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from goods_goods
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods_goods
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from goods_goods
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.onlineShop.bean.GoodsGoodsExample">
+    delete from goods_goods
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.onlineShop.bean.GoodsGoods">
+    insert into goods_goods (goods_id, goods_no, goods_name, 
+      short_name, spec_count, class_id, 
+      brand_id, base_unit_id, aux_unit_id, 
+      origin, remark, modified, 
+      created)
+    values (#{goodsId,jdbcType=INTEGER}, #{goodsNo,jdbcType=VARCHAR}, #{goodsName,jdbcType=VARCHAR}, 
+      #{shortName,jdbcType=VARCHAR}, #{specCount,jdbcType=INTEGER}, #{classId,jdbcType=INTEGER}, 
+      #{brandId,jdbcType=INTEGER}, #{baseUnitId,jdbcType=SMALLINT}, #{auxUnitId,jdbcType=SMALLINT}, 
+      #{origin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{modified,jdbcType=TIMESTAMP}, 
+      #{created,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.onlineShop.bean.GoodsGoods">
+    insert into goods_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="goodsNo != null">
+        goods_no,
+      </if>
+      <if test="goodsName != null">
+        goods_name,
+      </if>
+      <if test="shortName != null">
+        short_name,
+      </if>
+      <if test="specCount != null">
+        spec_count,
+      </if>
+      <if test="classId != null">
+        class_id,
+      </if>
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="baseUnitId != null">
+        base_unit_id,
+      </if>
+      <if test="auxUnitId != null">
+        aux_unit_id,
+      </if>
+      <if test="origin != null">
+        origin,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="modified != null">
+        modified,
+      </if>
+      <if test="created != null">
+        created,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsNo != null">
+        #{goodsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null">
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null">
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="specCount != null">
+        #{specCount,jdbcType=INTEGER},
+      </if>
+      <if test="classId != null">
+        #{classId,jdbcType=INTEGER},
+      </if>
+      <if test="brandId != null">
+        #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="baseUnitId != null">
+        #{baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="auxUnitId != null">
+        #{auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="origin != null">
+        #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="modified != null">
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="created != null">
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.onlineShop.bean.GoodsGoodsExample" resultType="java.lang.Long">
+    select count(*) from goods_goods
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update goods_goods
+    <set>
+      <if test="record.goodsId != null">
+        goods_id = #{record.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="record.goodsNo != null">
+        goods_no = #{record.goodsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.goodsName != null">
+        goods_name = #{record.goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shortName != null">
+        short_name = #{record.shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specCount != null">
+        spec_count = #{record.specCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.classId != null">
+        class_id = #{record.classId,jdbcType=INTEGER},
+      </if>
+      <if test="record.brandId != null">
+        brand_id = #{record.brandId,jdbcType=INTEGER},
+      </if>
+      <if test="record.baseUnitId != null">
+        base_unit_id = #{record.baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.auxUnitId != null">
+        aux_unit_id = #{record.auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.origin != null">
+        origin = #{record.origin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modified != null">
+        modified = #{record.modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.created != null">
+        created = #{record.created,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update goods_goods
+    set goods_id = #{record.goodsId,jdbcType=INTEGER},
+      goods_no = #{record.goodsNo,jdbcType=VARCHAR},
+      goods_name = #{record.goodsName,jdbcType=VARCHAR},
+      short_name = #{record.shortName,jdbcType=VARCHAR},
+      spec_count = #{record.specCount,jdbcType=INTEGER},
+      class_id = #{record.classId,jdbcType=INTEGER},
+      brand_id = #{record.brandId,jdbcType=INTEGER},
+      base_unit_id = #{record.baseUnitId,jdbcType=SMALLINT},
+      aux_unit_id = #{record.auxUnitId,jdbcType=SMALLINT},
+      origin = #{record.origin,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      modified = #{record.modified,jdbcType=TIMESTAMP},
+      created = #{record.created,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlineShop.bean.GoodsGoods">
+    update goods_goods
+    <set>
+      <if test="goodsNo != null">
+        goods_no = #{goodsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null">
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null">
+        short_name = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="specCount != null">
+        spec_count = #{specCount,jdbcType=INTEGER},
+      </if>
+      <if test="classId != null">
+        class_id = #{classId,jdbcType=INTEGER},
+      </if>
+      <if test="brandId != null">
+        brand_id = #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="baseUnitId != null">
+        base_unit_id = #{baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="auxUnitId != null">
+        aux_unit_id = #{auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="origin != null">
+        origin = #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="modified != null">
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="created != null">
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlineShop.bean.GoodsGoods">
+    update goods_goods
+    set goods_no = #{goodsNo,jdbcType=VARCHAR},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      short_name = #{shortName,jdbcType=VARCHAR},
+      spec_count = #{specCount,jdbcType=INTEGER},
+      class_id = #{classId,jdbcType=INTEGER},
+      brand_id = #{brandId,jdbcType=INTEGER},
+      base_unit_id = #{baseUnitId,jdbcType=SMALLINT},
+      aux_unit_id = #{auxUnitId,jdbcType=SMALLINT},
+      origin = #{origin,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      created = #{created,jdbcType=TIMESTAMP}
+    where goods_id = #{goodsId,jdbcType=INTEGER}
+  </update>
+</mapper>

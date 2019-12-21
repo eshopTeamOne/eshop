@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlineShop.dao.GoodsSpecMapper">
+  <resultMap id="BaseResultMap" type="com.onlineShop.bean.GoodsSpec">
+    <id column="spec_id" jdbcType="INTEGER" property="specId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="spec_no" jdbcType="VARCHAR" property="specNo" />
+    <result column="spec_code" jdbcType="VARCHAR" property="specCode" />
+    <result column="spec_name" jdbcType="VARCHAR" property="specName" />
+    <result column="retail_price" jdbcType="DECIMAL" property="retailPrice" />
+    <result column="member_price" jdbcType="DECIMAL" property="memberPrice" />
+    <result column="member_discount" jdbcType="DECIMAL" property="memberDiscount" />
+    <result column="validity_days" jdbcType="SMALLINT" property="validityDays" />
+    <result column="sales_days" jdbcType="INTEGER" property="salesDays" />
+    <result column="receive_days" jdbcType="INTEGER" property="receiveDays" />
+    <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="length" jdbcType="DECIMAL" property="length" />
+    <result column="width" jdbcType="DECIMAL" property="width" />
+    <result column="height" jdbcType="DECIMAL" property="height" />
+    <result column="base_unit_id" jdbcType="SMALLINT" property="baseUnitId" />
+    <result column="aux_unit_id" jdbcType="SMALLINT" property="auxUnitId" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="modified" jdbcType="TIMESTAMP" property="modified" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    spec_id, goods_id, spec_no, spec_code, spec_name, retail_price, member_price, member_discount, 
+    validity_days, sales_days, receive_days, weight, length, width, height, base_unit_id, 
+    aux_unit_id, remark, modified, created
+  </sql>
+  <select id="selectByExample" parameterType="com.onlineShop.bean.GoodsSpecExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from goods_spec
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods_spec
+    where spec_id = #{specId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from goods_spec
+    where spec_id = #{specId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.onlineShop.bean.GoodsSpecExample">
+    delete from goods_spec
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.onlineShop.bean.GoodsSpec">
+    insert into goods_spec (spec_id, goods_id, spec_no, 
+      spec_code, spec_name, retail_price, 
+      member_price, member_discount, validity_days, 
+      sales_days, receive_days, weight, 
+      length, width, height, 
+      base_unit_id, aux_unit_id, remark, 
+      modified, created)
+    values (#{specId,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, #{specNo,jdbcType=VARCHAR}, 
+      #{specCode,jdbcType=VARCHAR}, #{specName,jdbcType=VARCHAR}, #{retailPrice,jdbcType=DECIMAL}, 
+      #{memberPrice,jdbcType=DECIMAL}, #{memberDiscount,jdbcType=DECIMAL}, #{validityDays,jdbcType=SMALLINT}, 
+      #{salesDays,jdbcType=INTEGER}, #{receiveDays,jdbcType=INTEGER}, #{weight,jdbcType=DECIMAL}, 
+      #{length,jdbcType=DECIMAL}, #{width,jdbcType=DECIMAL}, #{height,jdbcType=DECIMAL}, 
+      #{baseUnitId,jdbcType=SMALLINT}, #{auxUnitId,jdbcType=SMALLINT}, #{remark,jdbcType=VARCHAR}, 
+      #{modified,jdbcType=TIMESTAMP}, #{created,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.onlineShop.bean.GoodsSpec">
+    insert into goods_spec
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="specId != null">
+        spec_id,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="specNo != null">
+        spec_no,
+      </if>
+      <if test="specCode != null">
+        spec_code,
+      </if>
+      <if test="specName != null">
+        spec_name,
+      </if>
+      <if test="retailPrice != null">
+        retail_price,
+      </if>
+      <if test="memberPrice != null">
+        member_price,
+      </if>
+      <if test="memberDiscount != null">
+        member_discount,
+      </if>
+      <if test="validityDays != null">
+        validity_days,
+      </if>
+      <if test="salesDays != null">
+        sales_days,
+      </if>
+      <if test="receiveDays != null">
+        receive_days,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+      <if test="length != null">
+        length,
+      </if>
+      <if test="width != null">
+        width,
+      </if>
+      <if test="height != null">
+        height,
+      </if>
+      <if test="baseUnitId != null">
+        base_unit_id,
+      </if>
+      <if test="auxUnitId != null">
+        aux_unit_id,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="modified != null">
+        modified,
+      </if>
+      <if test="created != null">
+        created,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="specId != null">
+        #{specId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="specNo != null">
+        #{specNo,jdbcType=VARCHAR},
+      </if>
+      <if test="specCode != null">
+        #{specCode,jdbcType=VARCHAR},
+      </if>
+      <if test="specName != null">
+        #{specName,jdbcType=VARCHAR},
+      </if>
+      <if test="retailPrice != null">
+        #{retailPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="memberPrice != null">
+        #{memberPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="memberDiscount != null">
+        #{memberDiscount,jdbcType=DECIMAL},
+      </if>
+      <if test="validityDays != null">
+        #{validityDays,jdbcType=SMALLINT},
+      </if>
+      <if test="salesDays != null">
+        #{salesDays,jdbcType=INTEGER},
+      </if>
+      <if test="receiveDays != null">
+        #{receiveDays,jdbcType=INTEGER},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="length != null">
+        #{length,jdbcType=DECIMAL},
+      </if>
+      <if test="width != null">
+        #{width,jdbcType=DECIMAL},
+      </if>
+      <if test="height != null">
+        #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="baseUnitId != null">
+        #{baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="auxUnitId != null">
+        #{auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="modified != null">
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="created != null">
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.onlineShop.bean.GoodsSpecExample" resultType="java.lang.Long">
+    select count(*) from goods_spec
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update goods_spec
+    <set>
+      <if test="record.specId != null">
+        spec_id = #{record.specId,jdbcType=INTEGER},
+      </if>
+      <if test="record.goodsId != null">
+        goods_id = #{record.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="record.specNo != null">
+        spec_no = #{record.specNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specCode != null">
+        spec_code = #{record.specCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.specName != null">
+        spec_name = #{record.specName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.retailPrice != null">
+        retail_price = #{record.retailPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.memberPrice != null">
+        member_price = #{record.memberPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.memberDiscount != null">
+        member_discount = #{record.memberDiscount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.validityDays != null">
+        validity_days = #{record.validityDays,jdbcType=SMALLINT},
+      </if>
+      <if test="record.salesDays != null">
+        sales_days = #{record.salesDays,jdbcType=INTEGER},
+      </if>
+      <if test="record.receiveDays != null">
+        receive_days = #{record.receiveDays,jdbcType=INTEGER},
+      </if>
+      <if test="record.weight != null">
+        weight = #{record.weight,jdbcType=DECIMAL},
+      </if>
+      <if test="record.length != null">
+        length = #{record.length,jdbcType=DECIMAL},
+      </if>
+      <if test="record.width != null">
+        width = #{record.width,jdbcType=DECIMAL},
+      </if>
+      <if test="record.height != null">
+        height = #{record.height,jdbcType=DECIMAL},
+      </if>
+      <if test="record.baseUnitId != null">
+        base_unit_id = #{record.baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.auxUnitId != null">
+        aux_unit_id = #{record.auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modified != null">
+        modified = #{record.modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.created != null">
+        created = #{record.created,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update goods_spec
+    set spec_id = #{record.specId,jdbcType=INTEGER},
+      goods_id = #{record.goodsId,jdbcType=INTEGER},
+      spec_no = #{record.specNo,jdbcType=VARCHAR},
+      spec_code = #{record.specCode,jdbcType=VARCHAR},
+      spec_name = #{record.specName,jdbcType=VARCHAR},
+      retail_price = #{record.retailPrice,jdbcType=DECIMAL},
+      member_price = #{record.memberPrice,jdbcType=DECIMAL},
+      member_discount = #{record.memberDiscount,jdbcType=DECIMAL},
+      validity_days = #{record.validityDays,jdbcType=SMALLINT},
+      sales_days = #{record.salesDays,jdbcType=INTEGER},
+      receive_days = #{record.receiveDays,jdbcType=INTEGER},
+      weight = #{record.weight,jdbcType=DECIMAL},
+      length = #{record.length,jdbcType=DECIMAL},
+      width = #{record.width,jdbcType=DECIMAL},
+      height = #{record.height,jdbcType=DECIMAL},
+      base_unit_id = #{record.baseUnitId,jdbcType=SMALLINT},
+      aux_unit_id = #{record.auxUnitId,jdbcType=SMALLINT},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      modified = #{record.modified,jdbcType=TIMESTAMP},
+      created = #{record.created,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.onlineShop.bean.GoodsSpec">
+    update goods_spec
+    <set>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="specNo != null">
+        spec_no = #{specNo,jdbcType=VARCHAR},
+      </if>
+      <if test="specCode != null">
+        spec_code = #{specCode,jdbcType=VARCHAR},
+      </if>
+      <if test="specName != null">
+        spec_name = #{specName,jdbcType=VARCHAR},
+      </if>
+      <if test="retailPrice != null">
+        retail_price = #{retailPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="memberPrice != null">
+        member_price = #{memberPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="memberDiscount != null">
+        member_discount = #{memberDiscount,jdbcType=DECIMAL},
+      </if>
+      <if test="validityDays != null">
+        validity_days = #{validityDays,jdbcType=SMALLINT},
+      </if>
+      <if test="salesDays != null">
+        sales_days = #{salesDays,jdbcType=INTEGER},
+      </if>
+      <if test="receiveDays != null">
+        receive_days = #{receiveDays,jdbcType=INTEGER},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="length != null">
+        length = #{length,jdbcType=DECIMAL},
+      </if>
+      <if test="width != null">
+        width = #{width,jdbcType=DECIMAL},
+      </if>
+      <if test="height != null">
+        height = #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="baseUnitId != null">
+        base_unit_id = #{baseUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="auxUnitId != null">
+        aux_unit_id = #{auxUnitId,jdbcType=SMALLINT},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="modified != null">
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="created != null">
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where spec_id = #{specId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.onlineShop.bean.GoodsSpec">
+    update goods_spec
+    set goods_id = #{goodsId,jdbcType=INTEGER},
+      spec_no = #{specNo,jdbcType=VARCHAR},
+      spec_code = #{specCode,jdbcType=VARCHAR},
+      spec_name = #{specName,jdbcType=VARCHAR},
+      retail_price = #{retailPrice,jdbcType=DECIMAL},
+      member_price = #{memberPrice,jdbcType=DECIMAL},
+      member_discount = #{memberDiscount,jdbcType=DECIMAL},
+      validity_days = #{validityDays,jdbcType=SMALLINT},
+      sales_days = #{salesDays,jdbcType=INTEGER},
+      receive_days = #{receiveDays,jdbcType=INTEGER},
+      weight = #{weight,jdbcType=DECIMAL},
+      length = #{length,jdbcType=DECIMAL},
+      width = #{width,jdbcType=DECIMAL},
+      height = #{height,jdbcType=DECIMAL},
+      base_unit_id = #{baseUnitId,jdbcType=SMALLINT},
+      aux_unit_id = #{auxUnitId,jdbcType=SMALLINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      created = #{created,jdbcType=TIMESTAMP}
+    where spec_id = #{specId,jdbcType=INTEGER}
+  </update>
+</mapper>
